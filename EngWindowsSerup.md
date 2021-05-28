@@ -18,8 +18,8 @@ Import-Module BitsTransfer
 New-Item -ItemType Directory -Force -Path C:\temp
 
 ## Install Visual Studio 
-Start-BitsTransfer -Source https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2019# -Destination C:\temp\vs_community.exe
-Invoke-Expression vs_community.exe -q --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.NativeMobile --add Microsoft.VisualStudio.Workload.NativeGame
+Start-BitsTransfer -Source https://elodie-desktop-artifacts.s3-us-west-1.amazonaws.com/provisioning/vs_community__206671023.1621527095.exe -Destination C:\temp\vs_community__206671023.1621527095.exe
+Invoke-Expression vs_community__206671023.1621527095.exe -q --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.NativeMobile --add Microsoft.VisualStudio.Workload.NativeGame
 
 ## Install Kleopatra/gpg4win
 Start-BitsTransfer -Source https://elodie-desktop-artifacts.s3-us-west-1.amazonaws.com/provisioning/gpg4win-3.1.15.exe -Destination C:\temp\gpg4win-3.1.15.exe
