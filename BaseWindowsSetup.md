@@ -13,10 +13,24 @@ windows
 $64BitCommand = @'
 ## Setup setup directory for downloads...
 New-Item -ItemType Directory -Force -Path C:\temp
+
 ## Install Hamachi...
 Import-Module BitsTransfer
 Start-BitsTransfer -Source https://secure.logmein.com/hamachi.msi -Destination C:\temp\hamachi.msi
 Start-Process msiexec.exe -Wait -ArgumentList '/I C:\temp\hamachi.msi /q'
+
+## Install things with choco
+choco install googledrive
+choco install 7zip
+choco install steam-client
+choco install epicgameslauncher
+choco install discord
+choco install p4v
+
+## Install UnrealGameSync
+Start-BitsTransfer -Source https://elodie-desktop-artifacts.s3-us-west-1.amazonaws.com/provisioning/UnrealGameSync.msi -Destination C:\temp\UnrealGameSync.msi
+Start-Process msiexec.exe -Wait -ArgumentList '/I C:\temp\UnrealGameSync.msi /q'
+
 ## Delete setup directory cause we no longer need it...
 Remove-Item 'C:\temp' -Recurse
 '@
