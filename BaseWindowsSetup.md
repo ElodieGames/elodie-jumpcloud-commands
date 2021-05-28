@@ -1,6 +1,6 @@
 #### Name
 
-Elodie - Base Windows 10 Pro Windows Setup
+ElodieWin10ProSetup
 
 #### commandType
 
@@ -11,10 +11,14 @@ windows
 ```
 ## Commands below within the @' '@
 $64BitCommand = @'
-## Install Hamachi
+## Setup setup directory for downloads...
+New-Item -ItemType Directory -Force -Path C:\temp
+## Install Hamachi...
 Import-Module BitsTransfer
 Start-BitsTransfer -Source https://secure.logmein.com/hamachi.msi -Destination C:\temp\hamachi.msi
 Start-Process msiexec.exe -Wait -ArgumentList '/I C:\temp\hamachi.msi /q'
+## Delete setup directory cause we no longer need it...
+Remove-Item 'C:\temp' -Recurse
 '@
 
 #------ Do not modify below this line ---------------
