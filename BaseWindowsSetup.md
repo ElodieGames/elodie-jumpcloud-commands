@@ -30,5 +30,5 @@ This is a big script that does a bunch of stuff. Early development.
 To import this command into your JumpCloud tenant run the below command using the [JumpCloud PowerShell Module](https://github.com/TheJumpCloud/support/wiki/Installing-the-JumpCloud-PowerShell-Module)
 
 ```
-Import-JCCommand -URL 'https://github.com/ElodieGames/JumpCloudCommands/blob/main/BaseWindowsSetup.md'
+Import-JCCommand -URL 'https://git.io/JG31d'
 ```
