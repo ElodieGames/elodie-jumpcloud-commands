@@ -24,7 +24,7 @@ choco install googledrive -y
 choco install 7zip -y
 choco install steam-client -y
 choco install epicgameslauncher -y
-choco install discord -y
+## choco install discord -y
 choco install p4v -y
 
 ## Install UnrealGameSync
