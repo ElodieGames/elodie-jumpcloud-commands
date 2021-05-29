@@ -1,6 +1,6 @@
 #### Name
 
-ElodieWin10ProSetup
+elodieBaseWindowsSetup
 
 #### commandType
 
