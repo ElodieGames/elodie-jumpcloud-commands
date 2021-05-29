@@ -19,9 +19,6 @@ Import-Module BitsTransfer
 Start-BitsTransfer -Source https://secure.logmein.com/hamachi.msi -Destination C:\temp\hamachi.msi
 Start-Process msiexec.exe -Wait -ArgumentList '/I C:\temp\hamachi.msi /q'
 
-## Create dev directory
-New-Item -Path "d:\" -Name "dev" -ItemType "directory"
-
 ## Install things with choco
 ## Currently excluding discord because it is failing on install.
 choco install googledrive 7zip steam-client epicgameslauncher p4v -y
