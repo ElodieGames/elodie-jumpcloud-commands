@@ -26,12 +26,7 @@ Start-BitsTransfer -Source https://elodie-desktop-artifacts.s3-us-west-1.amazona
 C:\temp\gpg4win-3.1.15.exe /S
 
 ## Install things with choco
-choco install git -y
-choco install docker-desktop -y
-choco install keybase -y
-choco install github-desktop -y
-choco install bloomrpc -y
-
+choco install git docker-desktop keybase github-desktop bloomrpc intellijidea-ultimate -y
 
 ## Delete setup directory cause we no longer need it...
 Remove-Item 'C:\temp' -Recurse

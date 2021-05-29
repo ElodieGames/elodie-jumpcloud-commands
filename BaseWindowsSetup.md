@@ -20,12 +20,8 @@ Start-BitsTransfer -Source https://secure.logmein.com/hamachi.msi -Destination C
 Start-Process msiexec.exe -Wait -ArgumentList '/I C:\temp\hamachi.msi /q'
 
 ## Install things with choco
-choco install googledrive -y
-choco install 7zip -y
-choco install steam-client -y
-choco install epicgameslauncher -y
-## choco install discord -y
-choco install p4v -y
+## Currently excluding discord because it is failing on install.
+choco install googledrive 7zip steam-client epicgameslauncher p4v -y
 
 ## Install UnrealGameSync
 Start-BitsTransfer -Source https://elodie-desktop-artifacts.s3-us-west-1.amazonaws.com/provisioning/UnrealGameSync.msi -Destination C:\temp\UnrealGameSync.msi
